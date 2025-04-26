@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - SC Custom Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">SC CUSTOM HUB</a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="products.html">Products</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="login.html" class="btn">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Signup Section -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-box">
+                <h2>Create Account</h2>
+                <p class="auth-subtitle">Join SC Custom Hub to start shopping</p>
+                
+                <!-- Signup Form -->
+                <form id="signup-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                        <small>Password must be at least 8 characters with at least one uppercase letter, number, and special character</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+                    </div>
+                    
+                    <button type="submit" class="auth-btn">Create Account</button>
+                </form>
+                
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="login.html">Sign In</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>SC CUSTOM HUB</h3>
+                <p>Personalized treasures for every occasion</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">About Us</a>
+                    <a href="products.html">Products</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <a href="products.html#mugs">Mugs</a>
+                    <a href="products.html#tshirts">T-Shirts</a>
+                    <a href="products.html#frames">Photo Frames</a>
+                    <a href="products.html#hampers">Gift Hampers</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <p>Mumbai, Maharashtra</p>
+                    <p>Email: info@sccustomhub.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Follow us on Instagram: <a href="https://www.instagram.com/SC_Custom_/">@SC_Custom_</a></p>
+            <p>&copy; 2025 SC Custom Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    
+    <script src="signup.js"></script>
+</body>
+</html>

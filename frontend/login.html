@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - SC Custom Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo"><a href="index.html">SC CUSTOM HUB</a></div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="products.html">Products</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="signup.html" class="btn">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login Section -->
+  <section class="auth-section">
+    <div class="auth-container">
+      <div class="auth-box">
+        <h2>Welcome Back</h2>
+        <p class="auth-subtitle">Login to continue shopping</p>
+
+        <form id="login-form" class="auth-form">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" required />
+          </div>
+
+          <button type="submit" class="auth-btn">Login</button>
+        </form>
+
+        <div class="auth-footer">
+          <p>Don't have an account? <a href="signup.html">Create one</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="login.js"></script>
+
+
+</body>
+</html>

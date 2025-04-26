@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Cart - SC Custom Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="nav-container">
+    <div class="logo">
+      <a href="index.html">SC CUSTOM HUB</a>
+    </div>
+    <div class="nav-links">
+      <a href="products.html" class="cart-link">
+        🛒 <span id="cart-count">0</span>
+      </a>
+      <a href="login.html" class="btn">Sign In</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Cart Section -->
+<section class="cart-section">
+  <div class="cart-container">
+    <h2>My Shopping Cart</h2>
+    <div id="cart-items"></div>
+
+    <div class="cart-summary">
+      <h3>Total: ₹<span id="total-amount">0</span></h3>
+      <button class="checkout-btn" id="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+</section>
+
+<script src="cart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,460 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+nav {
+    background-color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-links .btn {
+    background-color: #c19a6a;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    color: #c19a6a;
+}
+
+.hero {
+    position: relative;
+    background-image: url('images/bg.jpg'); /* Replace with your own image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9); /* Dark overlay */
+    z-index: -1; /* Make sure the overlay stays behind the text */
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(128, 128, 128, 0.5); /* Gray overlay */
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional for text visibility */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: #c19a6a;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+    background-color: #a17c54;
+}
+/*
+.about {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: #555;
+}*/
+
+/* About Section */
+.about-section {
+    background-color: #fff;
+    padding: 80px 20px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text .section-label {
+    color: #28a745;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.about-link {
+    font-weight: bold;
+    color: #28a745;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.about-link:hover {
+    text-decoration: underline;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Products Section */
+.products-section {
+    background-color: #f1f5f3;
+    padding: 80px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.products-section .section-label {
+    color: #28a745;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.products-section h2 {
+    font-size: 2.3rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+/* Product card styling */
+.product-card {
+    background: #fff;
+    width: calc(33.333% - 20px);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border: 1px dashed #999;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.product-card:hover h3 {
+    color: #28a745; /* Green highlight on hover */
+}
+
+.product-info p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.product-info span {
+    font-size: 1.2rem;
+    margin-left: 5px;
+}
+
+
+/* Occasions Section */
+.occasions-section {
+    background-color: #fff;
+    padding: 80px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.occasions-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.occasions-section .section-label {
+    color: #28a745;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.occasions-section h2 {
+    font-size: 2.3 rem;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.occasions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.occasion-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.occasion-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+}
+
+/* Overlay box inside the image */
+.overlay-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #f3f3f3;
+    padding: 20px;
+    max-width: 80%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+/* Overlay aligned right for every second card */
+.occasion-card.right .overlay-box {
+    left: auto;
+    right: 20px;
+}
+
+/* Fade in overlay on hover */
+.occasion-card:hover .overlay-box {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.occasion-card:hover img {
+    transform: scale(1.03);
+}
+
+.overlay-box h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.overlay-box p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.overlay {
+    background: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    max-width: 90%;
+    margin: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+.overlay h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.overlay p {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .occasions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .overlay-box,
+    .occasion-card.right .overlay-box {
+        left: 15px;
+        right: auto;
+        top: 15px;
+        max-width: 90%;
+        padding: 15px;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+footer a {
+    color: #c19a6a;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Adjusting for small screens */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .cta-btn {
+        font-size: 1rem;
+    }
+}
