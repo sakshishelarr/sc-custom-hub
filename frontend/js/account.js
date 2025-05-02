@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // 🛠️ Now update on server as well
           try {
             const token = localStorage.getItem('token');
-            const res = await fetch('http://sc-custom-hub.railway.internal/api/auth/update-profile', {
+            const res = await fetch('http://sc-custom-hub-production.up.railway.app/api/auth/update-profile', {
               method: 'PUT',
               headers: {
                 'Content-Type': 'application/json',
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         const token = localStorage.getItem('token');
   
-        const res = await fetch('http://sc-custom-hub.railway.internal/api/auth/change-password', {
+        const res = await fetch('http://sc-custom-hub-production.up.railway.app/api/auth/change-password', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
