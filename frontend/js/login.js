@@ -4,7 +4,7 @@ document.getElementById('login-form').addEventListener('submit', async function 
   const password = document.getElementById('password').value;
 
   try {
-    const res = await fetch('http://sc-custom-hub-production.up.railway.app/api/auth/login', {
+    const res = await fetch('https://sc-custom-hub-production.up.railway.app/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
@@ -16,7 +16,7 @@ document.getElementById('login-form').addEventListener('submit', async function 
       localStorage.setItem('token', result.token);
 
        // 🛠️ Now wait until token is stored, then fetch user details
-      const userRes = await fetch('http://sc-custom-hub-production.up.railway.app/api/auth/get-user', {
+      const userRes = await fetch('https://sc-custom-hub-production.up.railway.app/api/auth/get-user', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${result.token}`

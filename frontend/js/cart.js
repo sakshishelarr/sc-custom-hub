@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   
     async function fetchCart() {
       try {
-        const res = await fetch('http://sc-custom-hub-production.up.railway.app/api/cart/view', {
+        const res = await fetch('https://sc-custom-hub-production.up.railway.app/api/cart/view', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         const result = await res.json();
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   
     async function updateCart(productId, action) {
       try {
-        const res = await fetch('http://sc-custom-hub-production.up.railway.app/api/cart/update', {
+        const res = await fetch('https://sc-custom-hub-production.up.railway.app/api/cart/update', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   
     checkoutBtn.addEventListener('click', async function () {
       try {
-        const res = await fetch('http://sc-custom-hub-production.up.railway.app/api/orders/checkout', {
+        const res = await fetch('https://sc-custom-hub-production.up.railway.app/api/orders/checkout', {
           method: 'POST',
           headers: { 'Authorization': `Bearer ${token}` }
         });
