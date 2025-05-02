@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Account - SC Custom Hub</title>
+  <link rel="stylesheet" href="../css/account.css">
+  <link rel="stylesheet" href="../css/navbar.css"> <!-- Navbar Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Include your navbar here manually -->
+  <nav class="main-navbar">
+    <div class="logo">
+        <a href="index.html">SC CUSTOM HUB</a>
+    </div>
+    <div class="nav-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="products.html">Products</a>
+    </div>
+    <div class="nav-icons">
+        <div class="nav-icon" onclick="location.href='cart.html'">
+            <img src="../images/cart.png" alt="Cart" class="cart-icon">
+            <span id="cart-count">0</span>
+        </div>
+        <div class="nav-icon profile-menu">
+            <img src="../images/profile.png" alt="Profile" class="cart-icon">
+            <p id="profile-name">Hi Guest</p>
+            <div class="dropdown-menu" id="profile-dropdown">
+                <a href="login.html" id="login-link">Login/Register</a>
+                <a href="account.html" style="display:none;" id="account-link">My Account</a>
+                <a href="orders.html" style="display:none;" id="orders-link">My Orders</a>
+                <button id="logout-btn" style="display:none;">Logout</button>
+            </div>
+        </div>
+    </div>
+  </nav>
+
+  <section class="account-section">
+    <div class="account-sidebar info-card scroll-fade"  >
+      <div class="profile-summary">
+        <div class="profile-photo-container">
+          <img src="../images/default-profile.png" alt="Profile Photo" id="profile-photo">
+          <div class="photo-overlay">
+            <label for="upload-photo" class="photo-edit-btn">
+              <i class="fas fa-camera"></i>
+            </label>
+            <input type="file" id="upload-photo" accept="image/*">
+          </div>
+        </div>
+        <h3 id="welcome-message">Welcome, Guest!</h3>
+      </div>
+      
+      <div class="menu-items">
+        <a href="#" class="menu-item active" data-section="personal-info">
+          <i class="fas fa-user"></i> Personal Info
+        </a>
+        <a href="#" class="menu-item" data-section="security">
+          <i class="fas fa-lock"></i> Security
+        </a>
+        <a href="orders.html" class="menu-item">
+          <i class="fas fa-shopping-bag"></i> My Orders
+        </a>
+        <button id="logout" class="menu-item logout-item">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+    </div>
+    
+    <div class="account-content">
+      <!-- Personal Info Section -->
+      <div class="content-section active info-card scroll-fade" id="personal-info">
+        <div class="section-header">
+          <h2>Personal Information</h2>
+          <p>Manage your personal details</p>
+        </div>
+        
+        <div class="info-card">
+          <div class="info-row">
+            <div class="info-label">Name</div>
+            <div class="info-value">
+              <input type="text" id="user-name" disabled>
+              <button class="edit-btn" id="edit-name-btn">
+                <i class="fas fa-pencil-alt"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="info-row">
+            <div class="info-label">Email</div>
+            <div class="info-value">
+              <input type="email" id="user-email" disabled>
+              <button class="edit-btn" id="edit-email-btn">
+                <i class="fas fa-pencil-alt"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="save-changes-row" id="save-personal-info" style="display: none">
+            <button class="save-btn">
+              <i class="fas fa-check"></i> Save Changes
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Security Section -->
+      <div class="content-section info-card scroll-fade" id="security">
+        <div class="section-header">
+          <h2>Security</h2>
+          <p>Manage your password and account security</p>
+        </div>
+        
+        <div class="info-card">
+          <form id="change-password-form">
+            <div class="password-strength">
+              <h4>Password Strength</h4>
+              <div class="strength-meter">
+                <div class="strength-bar"></div>
+              </div>
+              <p class="password-tip">Strong password helps protect your account</p>
+            </div>
+            
+            <div class="form-group">
+              <label for="current-password">Current Password</label>
+              <div class="password-input">
+                <input type="password" id="current-password" required>
+                <button type="button" class="toggle-password">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="new-password">New Password</label>
+              <div class="password-input">
+                <input type="password" id="new-password" required>
+                <button type="button" class="toggle-password">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="confirm-password">Confirm New Password</label>
+              <div class="password-input">
+                <input type="password" id="confirm-password" required>
+                <button type="button" class="toggle-password">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+            
+            <button type="submit" class="update-btn">Update Password</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toast">
+    <div class="toast-icon">
+      <i class="fas fa-check-circle"></i>
+    </div>
+    <div class="toast-message">Changes saved successfully!</div>
+  </div>
+
+  <script src="../js/account.js"></script>
+  <script src="../js/navbar.js"></script>
+</body>
+</html>

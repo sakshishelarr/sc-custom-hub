@@ -5,29 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products - SC Custom Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="products-page.css">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/products-page.css">
+    <link rel="stylesheet" href="../css/navbar.css">
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html">SC CUSTOM HUB</a>
+    <nav class="main-navbar">
+        <div class="logo">
+            <a href="index.html">SC CUSTOM HUB</a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="products.html">Products</a>
+        </div>
+        <div class="nav-icons">
+            <div class="nav-icon" onclick="location.href='cart.html'">
+                <img src="../images/cart.png" alt="Cart" class="cart-icon">
+                <span id="cart-count">0</span>
             </div>
-            <div class="nav-links">
-                
-                <a href="cart.html" class="cart-link">
-                    🛒 <span id="cart-count">0</span>
-                </a>
-                <a href="login.html" class="btn">Sign In</a>
+            <div class="nav-icon profile-menu">
+                <img src="../images/profile.png" alt="Profile" class="cart-icon">
+                <p id="profile-name">Hi Guest</p>
+                <div class="dropdown-menu" id="profile-dropdown">
+                    <a href="login.html" id="login-link">Login/Register</a>
+                    <a href="account.html" style="display:none;" id="account-link">My Account</a>
+                    <a href="orders.html" style="display:none;" id="orders-link">My Orders</a>
+                    <button id="logout-btn" style="display:none;">Logout</button>
+                </div>
             </div>
         </div>
-    </nav>
+      </nav>
 
     <!-- Products Hero Section -->
-    <section class="products-hero">
+    <section class="products-hero ">
         <div class="products-hero-content">
             <h5 class="section-label">OUR COLLECTION</h5>
             <h1>Discover Our Personalized Treasures</h1>
@@ -36,7 +48,7 @@
     </section>
 
     <!-- Product Categories -->
-    <section class="product-categories">
+    <section class="product-categories reveal">
         <div class="container">
             <div class="category-filters">
                 <button class="filter-btn active" data-filter="all">All Products</button>
@@ -44,19 +56,22 @@
                 <button class="filter-btn" data-filter="tshirts">T-Shirts</button>
                 <button class="filter-btn" data-filter="frames">Photo Frames</button>
                 <button class="filter-btn" data-filter="keychains">Keychains</button>
+                <button class="filter-btn" data-filter="wallets">Wallets</button>
+                <button class="filter-btn" data-filter="bottle">Bottle</button>
+                <button class="filter-btn" data-filter="pillow">Pillow</button>
                 <button class="filter-btn" data-filter="hampers">Gift Hampers</button>
             </div>
         </div>
     </section>
 
     <!-- Product Grid -->
-    <section class="product-showcase">
+    <section class="product-showcase reveal">
         <div class="container">
             <div class="product-grid">
                 <!-- Mugs -->
                 <div class="product-item" data-category="mugs">
                     <div class="product-image">
-                        <img src="images/mugs.jpg" alt="Custom Photo Mug">
+                        <img src="../images/mugs1.jpg" alt="Custom Photo Mug">
                         <div class="product-actions">
                             <button class="quick-view">Quick View</button>
                             <button class="add-to-cart">Add to Cart</button>
@@ -74,7 +89,7 @@
 
                 <div class="product-item" data-category="mugs">
                     <div class="product-image">
-                        <img src="images/mugs.jpg" alt="Magic Color Changing Mug">
+                        <img src="../images/mugs.jpg" alt="Magic Color Changing Mug">
                         <div class="product-actions">
                             <button class="quick-view">Quick View</button>
                             <button class="add-to-cart">Add to Cart</button>
@@ -91,9 +106,9 @@
                 </div>
 
                 <!-- T-Shirts -->
-                <div class="product-item" data-category="tshirts">
+                <div class="product-item" data-category="pillow">
                     <div class="product-image">
-                        <img src="images/tshirt.jpg" alt="Custom Text T-Shirt">
+                        <img src="../images/pillow.jpg" alt="Custom Pillow">
                         <div class="product-badge">New</div>
                         <div class="product-actions">
                             <button class="quick-view">Quick View</button>
@@ -101,7 +116,7 @@
                         </div>
                     </div>
                     <div class="product-details">
-                        <h3>Custom Text T-Shirt</h3>
+                        <h3>Custom Pillow</h3>
                         <p class="product-price">₹599</p>
                         <div class="product-rating">
                             <span class="stars">★★★★★</span>
@@ -112,7 +127,7 @@
 
                 <div class="product-item" data-category="tshirts">
                     <div class="product-image">
-                        <img src="images/tshirt.jpg" alt="Couple T-Shirts Set">
+                        <img src="../images/tshirt.jpg" alt="Couple T-Shirts Set">
                         <div class="product-actions">
                             <button class="quick-view">Quick View</button>
                             <button class="add-to-cart">Add to Cart</button>
@@ -131,7 +146,7 @@
                 <!-- Photo Frames -->
                 <div class="product-item" data-category="frames">
                     <div class="product-image">
-                        <img src="images/frame.jpg" alt="Personalized Wooden Frame">
+                        <img src="../images/frame.jpg" alt="Personalized Wooden Frame">
                         <div class="product-actions">
                             <button class="quick-view">Quick View</button>
                             <button class="add-to-cart">Add to Cart</button>
@@ -149,7 +164,7 @@
 
                 <div class="product-item" data-category="frames">
                     <div class="product-image">
-                        <img src="images/frame.jpg" alt="LED Light Photo Frame">
+                        <img src="../images/led.jpg" alt="LED Light Photo Frame">
                         <div class="product-badge">Bestseller</div>
                         <div class="product-actions">
                             <button class="quick-view">Quick View</button>
@@ -166,17 +181,17 @@
                     </div>
                 </div>
 
-                <!-- Keychains -->
-                <div class="product-item" data-category="keychains">
+                <!-- Bottle -->
+                <div class="product-item" data-category="bottle">
                     <div class="product-image">
-                        <img src="images/keychain.jpg" alt="Custom Photo Keychain">
+                        <img src="../images/bottle.jpg" alt="bottle">
                         <div class="product-actions">
                             <button class="quick-view">Quick View</button>
                             <button class="add-to-cart">Add to Cart</button>
                         </div>
                     </div>
                     <div class="product-details">
-                        <h3>Custom Photo Keychain</h3>
+                        <h3>Twin Bottles</h3>
                         <p class="product-price">₹249</p>
                         <div class="product-rating">
                             <span class="stars">★★★★<span class="empty-star">★</span></span>
@@ -187,14 +202,50 @@
 
                 <div class="product-item" data-category="keychains">
                     <div class="product-image">
-                        <img src="images/keychain.jpg" alt="Name Engraved Keychain">
+                        <img src="../images/pen.jpg" alt="Name Engraved Keychain">
                         <div class="product-actions">
                             <button class="quick-view">Quick View</button>
                             <button class="add-to-cart">Add to Cart</button>
                         </div>
                     </div>
                     <div class="product-details">
-                        <h3>Name Engraved Keychain</h3>
+                        <h3>Name Engraved Pen & Keychain</h3>
+                        <p class="product-price">₹299</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="count">(41)</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- wallet -->
+                <div class="product-item" data-category="wallets">
+                    <div class="product-image">
+                        <img src="../images/wallet1.jpg" alt="wallet">
+                        <div class="product-actions">
+                            <button class="quick-view">Quick View</button>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3>Wallet</h3>
+                        <p class="product-price">₹249</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★<span class="empty-star">★</span></span>
+                            <span class="count">(34)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="wallets">
+                    <div class="product-image">
+                        <img src="../images/wallet2.jpg" alt="wallet">
+                        <div class="product-actions">
+                            <button class="quick-view">Quick View</button>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3>Name Engraved wallet</h3>
                         <p class="product-price">₹299</p>
                         <div class="product-rating">
                             <span class="stars">★★★★★</span>
@@ -203,10 +254,11 @@
                     </div>
                 </div>
 
+
                 <!-- Gift Hampers -->
                 <div class="product-item" data-category="hampers">
                     <div class="product-image">
-                        <img src="images/hamper.jpg" alt="Birthday Special Hamper">
+                        <img src="../images/hamper2.jpg" alt="Birthday Special Hamper">
                         <div class="product-badge">Popular</div>
                         <div class="product-actions">
                             <button class="quick-view">Quick View</button>
@@ -215,7 +267,7 @@
                     </div>
                     <div class="product-details">
                         <h3>Birthday Special Hamper</h3>
-                        <p class="product-price">₹1499</p>
+                        <p class="product-price">₹469</p>
                         <div class="product-rating">
                             <span class="stars">★★★★★</span>
                             <span class="count">(47)</span>
@@ -225,7 +277,7 @@
 
                 <div class="product-item" data-category="hampers">
                     <div class="product-image">
-                        <img src="images/hamper.jpg" alt="Anniversary Gift Box">
+                        <img src="../images/hamper.jpg" alt="Anniversary Gift Box">
                         <div class="product-actions">
                             <button class="quick-view">Quick View</button>
                             <button class="add-to-cart">Add to Cart</button>
@@ -240,12 +292,48 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="product-item" data-category="hampers">
+                    <div class="product-image">
+                        <img src="../images/combo.jpg" alt="combo">
+                        <div class="product-actions">
+                            <button class="quick-view">Quick View</button>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3>Combo-Pen, Keychain, Wallet</h3>
+                        <p class="product-price">₹599</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★<span class="empty-star">★</span></span>
+                            <span class="count">(23)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="frames">
+                    <div class="product-image">
+                        <img src="../images/ring.jpg" alt="Anniversary Gift Box">
+                        <div class="product-actions">
+                            <button class="quick-view">Quick View</button>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3>Ring Frame</h3>
+                        <p class="product-price">₹1299</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★<span class="empty-star">★</span></span>
+                            <span class="count">(23)</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Newsletter Section -->
-    <section class="newsletter">
+    <section class="newsletter reveal">
         <div class="container">
             <h2>Stay Updated</h2>
             <p>Subscribe to our newsletter for exclusive offers and updates</p>
@@ -258,7 +346,7 @@
 
     <!-- Footer Section -->
     <footer>
-        <div class="footer-content">
+        <div class="footer-content reveal">
             <div class="footer-logo">
                 <h3>SC CUSTOM HUB</h3>
                 <p>Personalized treasures for every occasion</p>
@@ -280,20 +368,22 @@
                 </div>
                 <div class="footer-column">
                     <h4>Contact Us</h4>
-                    <p>Mumbai, Maharashtra</p>
+                    <p>Pune, Maharashtra</p>
                     <p>Email: info@sccustomhub.com</p>
                     <p>Phone: +91 98765 43210</p>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>Follow us on Instagram: <a href="https://www.instagram.com/SC_Custom_/">@SC_Custom_</a></p>
+            <p>Follow us on Instagram: <a href="https://www.instagram.com/_SC_Custom_/">@_SC_Custom_</a></p>
             <p>&copy; 2025 SC Custom Hub. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="products.js"></script>
-    <script src="scripts/navbar.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script> <!-- ✨ ScrollReveal -->
+    <script src="../js/products-scrollreveal.js"></script> <!-- ✨ Your animations -->
 
 </body>
 </html>

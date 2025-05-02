@@ -62,5 +62,46 @@ router.get('/myorders', authMiddleware, async (req, res) => {
     res.status(500).json({ msg: 'Server error' });
   }
 });
+// Get latest order
+// In your backend (ordersRoutes.js or similar)
+
+router.get('/latest', authMiddleware, async (req, res) => {
+  try {
+    const order = await Order.findOne({ user: req.user.userId }).sort({ createdAt: -1 }).populate('user', 'fullname email');
+    if (!order) {
+      return res.status(404).json({ msg: 'No orders found.' });
+    }
+    res.json({ 
+      order: {
+        _id: order._id,
+        products: order.products,
+        totalAmount: order.totalAmount,
+        subtotal: order.totalAmount, // you can split later if you have tax
+        shipping: 0, // Assume Free Shipping
+        tax: 50, // Hardcoded for now
+        user: {
+          fullname: order.user.fullname,
+          email: order.user.email,
+        }
+      }
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: 'Server error' });
+  }
+});
+
+
+
+// Get all order history
+router.get('/history', authMiddleware, async (req, res) => {
+  try {
+    const orders = await Order.find({ userId: req.userId }).sort({ createdAt: -1 });
+    res.json(orders);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: 'Server error' });
+  }
+});
 
 module.exports = router;

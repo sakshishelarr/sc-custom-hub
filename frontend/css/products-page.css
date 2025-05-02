@@ -42,7 +42,9 @@
 
 /* Products Hero Section */
 .products-hero {
-    background-image: url('images/product.jpg');
+    background-image: url('../images/product.jpg');
+    background-size: cover;
+    background-position: center;
     padding: 140px 20px 80px;
     text-align: center;
 }
@@ -65,12 +67,12 @@
     font-size: 3rem;
     margin-bottom: 20px;
     font-weight: 700;
-    color: #333;
+    color: white;
 }
 
 .products-hero p {
     font-size: 1.2rem;
-    color: #555;
+    color: white;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -480,3 +482,37 @@ footer {
     display: block;
   }
   
+  /* Animation Helper Classes */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .products-hero-content {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 1s ease-out;
+}
+
+.products-hero-content.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.product-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* When active */
+.product-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}

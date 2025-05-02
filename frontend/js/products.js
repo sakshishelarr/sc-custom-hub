@@ -8,30 +8,47 @@ document.addEventListener('DOMContentLoaded', function () {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const productItems = document.querySelectorAll('.product-item');
 
+    let activeFilters = new Set();
+
     filterButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.addEventListener('click', function() {
+        const filter = this.getAttribute('data-filter');
+
+        // Toggle active state
+        if (activeFilters.has(filter)) {
+            activeFilters.delete(filter);
+            this.classList.remove('active');
+        } else {
+            activeFilters.add(filter);
             this.classList.add('active');
+        }
 
-            const filter = this.getAttribute('data-filter');
-
-            productItems.forEach(item => {
-                if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                    item.style.display = 'block';
-                    setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'translateY(0)';
-                    }, 100);
-                } else {
-                    item.style.opacity = '0';
-                    item.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        item.style.display = 'none';
-                    }, 300);
-                }
-            });
+        filterProducts();
         });
     });
+
+    function filterProducts() {
+        productItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        if (activeFilters.size === 0 || activeFilters.has(itemCategory)) {
+            item.style.display = 'block';
+            setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+            }, 100);
+        } else {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+            item.style.display = 'none';
+            }, 300);
+        }
+        });
+    }
+
+  // Initially show all products
+  filterProducts();
+
 
     // Quick View Button Functionality
     const quickViewButtons = document.querySelectorAll('.quick-view');

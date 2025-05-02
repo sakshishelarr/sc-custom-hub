@@ -5,22 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - SC Custom Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" href="../css/navbar.css">
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html">SC CUSTOM HUB</a>
+    <nav class="main-navbar">
+        <div class="logo">
+            <a href="index.html">SC CUSTOM HUB</a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="products.html">Products</a>
+        </div>
+        <div class="nav-icons">
+            <div class="nav-icon" onclick="location.href='cart.html'">
+                <img src="../images/cart.png" alt="Cart" class="cart-icon">
+                <span id="cart-count">0</span>
             </div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="index.html#about">About</a>
-                <a href="products.html">Products</a>
-                <a href="index.html#contact">Contact</a>
-                <a href="login.html" class="btn">Sign In</a>
+            <div class="nav-icon profile-menu">
+                <img src="../images/profile.png" alt="Profile" class="cart-icon">
+                <p id="profile-name">Hi Guest</p>
+                <div class="dropdown-menu" id="profile-dropdown">
+                    <a href="login.html" id="login-link">Login/Register</a>
+                    <a href="account.html" style="display:none;" id="account-link">My Account</a>
+                    <a href="orders.html" style="display:none;" id="orders-link">My Orders</a>
+                    <button id="logout-btn" style="display:none;">Logout</button>
+                </div>
             </div>
         </div>
     </nav>
@@ -94,19 +107,20 @@
                 </div>
                 <div class="footer-column">
                     <h4>Contact Us</h4>
-                    <p>Mumbai, Maharashtra</p>
+                    <p>Pune, Maharashtra</p>
                     <p>Email: info@sccustomhub.com</p>
                     <p>Phone: +91 98765 43210</p>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>Follow us on Instagram: <a href="https://www.instagram.com/SC_Custom_/">@SC_Custom_</a></p>
+            <p>Follow us on Instagram: <a href="https://www.instagram.com/_SC_Custom_/">@_SC_Custom_</a></p>
             <p>&copy; 2025 SC Custom Hub. All rights reserved.</p>
         </div>
     </footer>
 
     
-    <script src="signup.js"></script>
+    <script src="../js/signup.js"></script>
+    <script src="../js/navbar.js"></script>
 </body>
 </html>

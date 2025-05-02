@@ -12,3 +12,10 @@ function changeSlide() {
 
 // Change slide every 3 seconds
 setInterval(changeSlide, 3000);
+
+document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('click', () => {
+      window.location.href = 'products.html';
+    });
+  });
+  

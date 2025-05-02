@@ -1,0 +1,28 @@
+<!-- Navbar Start -->
+<nav class="main-navbar">
+  <div class="logo">
+    <a href="index.html">SC CUSTOM HUB</a>
+  </div>
+
+  <div class="nav-icons">
+    <!-- Cart -->
+    <div class="nav-icon" onclick="location.href='cart.html'">
+      <img src="images/your-cart-icon.png" alt="Cart" class="cart-icon">
+      <span id="cart-count">0</span>
+    </div>
+
+    <!-- Profile -->
+    <div class="nav-icon profile-menu">
+      <img src="images/profile-icon.png" alt="Profile">
+      <p id="profile-name">Hi Guest</p>
+
+      <div class="dropdown-menu" id="profile-dropdown">
+        <a href="login.html" id="login-link">Login/Register</a>
+        <a href="account.html" style="display:none;" id="account-link">My Account</a>
+        <a href="orders.html" style="display:none;" id="orders-link">My Orders</a>
+        <button id="logout-btn" style="display:none;">Logout</button>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Navbar End -->

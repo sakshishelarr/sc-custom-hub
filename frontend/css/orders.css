@@ -1,0 +1,347 @@
+/* orders.css */
+:root {
+  --primary: #c19a6a;
+  --bg-light: #f9f9f9;
+  --text-dark: #333;
+  --text-light: #666;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-light);
+
+}
+
+.container {
+  max-width: 1200px;
+  padding: 100px 20px 50px 20px; /* top right bottom left */
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.checkout-left, .checkout-right {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.order-number {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 5px;
+}
+
+.order-confirmation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.check-circle {
+  background: #28a745;
+  color: #fff;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.order-updates {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.info-section {
+  margin-bottom: 15px;
+}
+
+.info-label {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.info-value {
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+.need-help {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.contact-link {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+/* Order Summary */
+.order-summary h2 {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.lock-icon {
+  font-size: 16px;
+}
+
+.order-count {
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.item-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  background: #eee;
+}
+
+.item-red {
+  background-color: #ffcdd2;
+}
+
+.item-white {
+  background-color: #f5f5f5;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-name {
+  font-weight: 600;
+}
+
+.item-meta {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+.item-quantity {
+  font-size: 13px;
+}
+
+.item-price {
+  text-align: right;
+  font-weight: 500;
+}
+
+/* Cost Summary */
+.cost-summary {
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.cost-row, .total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.total-row {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Button */
+.button {
+  margin-top: 30px;
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #333;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+/* Footer */
+footer {
+  background-color: #222;
+  color: #f5f5f5;
+  padding: 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-column {
+  min-width: 150px;
+}
+
+.footer-column h4 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.footer-column a {
+  display: block;
+  color: #aaa;
+  margin-bottom: 8px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #c19a6a;
+}
+
+.footer-column p {
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.footer-bottom {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.footer-bottom a {
+  color: #c19a6a;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* --- Animations --- */
+
+/* Slide-in animation */
+@keyframes slideInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Fade + scale animation */
+@keyframes fadeInScale {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animation classes */
+.animate-slide-in {
+  animation: slideInUp 0.8s ease forwards;
+}
+
+.animate-fade-scale {
+  animation: fadeInScale 0.7s ease forwards;
+}
+
+/* Smooth fade-in for order items */
+.order-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInUp 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* Animate cost summary separately */
+.cost-summary {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInScale 0.7s ease forwards;
+  animation-delay: 0.4s;
+}
