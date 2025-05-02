@@ -18,7 +18,7 @@ document.getElementById('signup-form').addEventListener('submit', async function
     }
   
     try {
-      const res = await fetch('http://localhost:5000/api/auth/signup', {
+      const res = await fetch('http://sc-custom-hub.railway.internal/api/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ fullname, email, password })

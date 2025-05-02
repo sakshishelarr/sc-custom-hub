@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   document.getElementById('thank-you-message').textContent = `Thank you ${user.fullname.split(' ')[0]}!`;
 
   try {
-    const res = await fetch('http://localhost:5000/api/orders/latest', {
+    const res = await fetch('http://sc-custom-hub.railway.internal/api/orders/latest', {
       headers: { 'Authorization': `Bearer ${token}` }
     });
 

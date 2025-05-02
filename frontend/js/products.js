@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const productPrice = productItem.querySelector('.product-price').textContent;
 
             try {
-                const res = await fetch('http://localhost:5000/api/cart/add', {
+                const res = await fetch('http://sc-custom-hub.railway.internal/api/cart/add', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
