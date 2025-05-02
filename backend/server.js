@@ -13,7 +13,10 @@ connectDB();
 const app = express();
 
 // Middleware to parse incoming requests
-app.use(cors()); // Add this
+app.use(cors({
+  origin: 'https://sc-custom-hub.vercel.app', // ✅ Your deployed frontend domain
+  credentials: true
+})); // Add this
 app.use(express.json());
 
 
