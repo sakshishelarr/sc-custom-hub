@@ -1,4 +1,4 @@
-# 🎁 SC Custom Hub
+# SC Custom Hub
 
 **SC Custom Hub** is a sleek and modern web platform for exploring, customizing, and purchasing personalized gifts like mugs, t-shirts, photo frames, and more — perfect for every occasion.
 
@@ -17,7 +17,7 @@
 sc-custom-hub/
 ├── frontend/
 │   ├── index.html
-|   ├── orders.html     # All HTML files (login.html, products.html, etc.)
+│   ├── orders.html     # All HTML files (login.html, products.html, etc.)
 │   ├── css/            # All CSS files
 │   ├── js/             # All client-side JS (login.js, cart.js, orders.js, etc.)
 │   └── images/         # Static assets like logos and banners
@@ -28,7 +28,7 @@ sc-custom-hub/
 │   └── server.js       # Express app entry point
 ├── .env                # Environment variables
 └── README.md           # Project documentation
-
+```
 
 
 
@@ -88,7 +88,7 @@ sc-custom-hub/
 ```
 
 🙌 Credits
-Designed and built by @sakshishelarr with 💖
+Designed and built by @sakshishelarr 
 
 yaml
 Copy
