@@ -92,7 +92,7 @@ sc-custom-hub/
 ---
 
 ## Credits:
-Designed and built by @sakshishelarr 
+- Designed and built by **@sakshishelarr** 
 ---
 
 
