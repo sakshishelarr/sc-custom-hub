@@ -1,4 +1,7 @@
 # SC Custom Hub
+![GitHub last commit](https://img.shields.io/github/last-commit/sakshishelarr/sc-custom-hub?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/sakshishelarr/sc-custom-hub?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/sakshishelarr/sc-custom-hub?style=flat-square)
 
 **SC Custom Hub** is a sleek and modern web platform for exploring, customizing, and purchasing personalized gifts like mugs, t-shirts, photo frames, and more — perfect for every occasion.
 
