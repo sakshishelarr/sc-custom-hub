@@ -26,3 +26,75 @@ sc-custom-hub/
 │ └── server.js # Express app entry point
 ├── .env # Environment variables
 └── README.md # Project documentation
+
+
+
+---
+
+## 🔧 Tech Stack
+
+- **Frontend**: HTML, CSS, JavaScript (Vanilla)
+- **Backend**: Node.js, Express.js, MongoDB (Mongoose)
+- **Authentication**: JWT (JSON Web Tokens)
+- **Hosting**:
+  - **Frontend**: Vercel
+  - **Backend**: Railway
+  - **Database**: MongoDB Atlas
+
+---
+
+## 📦 Features
+
+- 🔐 User Authentication (Signup/Login with JWT)
+- 🛍️ Product Browsing
+- 🛒 Add to Cart
+- ✅ Checkout and Order Confirmation
+- 📦 View Recent Order (on orders page)
+- 🧾 Order History (on account page)
+- 📱 Responsive design
+
+---
+
+## 🛠️ Setup Instructions (for local development)
+
+1. **Clone the repo:**
+
+   ```bash
+   git clone https://github.com/sakshishelarr/sc-custom-hub.git
+   cd sc-custom-hub
+
+2. **Setup backend:**
+
+  ```bash
+  cd backend
+  npm install
+```
+3. **Add .env file in /backend/ directory:**
+
+  ```ini
+  PORT=5000
+  MONGO_URI=your_mongodb_connection_string
+  JWT_SECRET=your_jwt_secret_key
+```
+
+4. **Start the server:**
+
+  ```bash
+  node server.js
+  Open frontend/html/index.html in your browser (or use Live Server).
+```
+
+🙌 Credits
+Designed and built by @sakshishelarr with 💖
+
+yaml
+Copy
+
+---
+
+Let me know if you'd like a version with screenshots or badges too!
+
+
+
+
+
