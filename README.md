@@ -1,5 +1,4 @@
 # SC Custom Hub
-![GitHub last commit](https://img.shields.io/github/last-commit/sakshishelarr/sc-custom-hub?style=flat-square)
 ![GitHub repo size](https://img.shields.io/github/repo-size/sakshishelarr/sc-custom-hub?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/sakshishelarr/sc-custom-hub?style=flat-square)
 
