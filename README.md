@@ -1,6 +1,5 @@
 
 
----
 
 ```markdown
 # 🎁 SC Custom Hub
