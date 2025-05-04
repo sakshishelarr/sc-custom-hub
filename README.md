@@ -89,15 +89,11 @@ sc-custom-hub/
   Open frontend/html/index.html in your browser (or use Live Server).
 ```
 
-🙌 Credits
-Designed and built by @sakshishelarr 
-
-yaml
-Copy
-
 ---
 
-Let me know if you'd like a version with screenshots or badges too!
+## Credits:
+Designed and built by @sakshishelarr 
+---
 
 
 
