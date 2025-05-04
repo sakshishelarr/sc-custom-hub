@@ -11,21 +11,24 @@
 
 ---
 
-## 🗂️ Project Structure
+## 📁 Project Structure
 
+```bash
 sc-custom-hub/
 ├── frontend/
-│ ├── html/ # All HTML files (index.html, login.html, products.html, etc.)
-│ ├── css/ # All CSS files
-│ ├── js/ # All client-side JS (login.js, cart.js, orders.js, etc.)
-│ └── images/ # Static assets like logos and banners
+│   ├── index.html
+|   ├── orders.html     # All HTML files (login.html, products.html, etc.)
+│   ├── css/            # All CSS files
+│   ├── js/             # All client-side JS (login.js, cart.js, orders.js, etc.)
+│   └── images/         # Static assets like logos and banners
 ├── backend/
-│ ├── routes/ # Route files: authRoutes.js, orderRoutes.js, etc.
-│ ├── models/ # Mongoose models: User.js, Order.js, Cart.js
-│ ├── config/ # MongoDB connection (db.js)
-│ └── server.js # Express app entry point
-├── .env # Environment variables
-└── README.md # Project documentation
+│   ├── routes/         # Route files: authRoutes.js, orderRoutes.js, etc.
+│   ├── models/         # Mongoose models: User.js, Order.js, Cart.js
+│   ├── config/         # MongoDB connection (db.js)
+│   └── server.js       # Express app entry point
+├── .env                # Environment variables
+└── README.md           # Project documentation
+
 
 
 
